@@ -6,7 +6,8 @@ node {
 
     def registry = "curs/showcase"
     def registryCredential = "dockerhub"
-    def pcImg
+    def image
+    def propertiesImage
     
     stage('Build common image') {
         image = docker.build(registry + ":6.1.$BUILD_NUMBER", '--build-arg "SHOWCASE_VERSION=${BUILD_NUMBER}"')

@@ -10,7 +10,6 @@ set -e
 
 for envVar in $(env | grep showcase_); do
     prop="${envVar/showcase_/}"
-    prop="${prop//_/\.}"
     echo "$prop" >> userdata/generalapp.properties
 done
 

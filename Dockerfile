@@ -11,8 +11,8 @@ RUN apk add -U unzip && rm -rf /var/cache/apk/*
 # SHOWCASE
 # ADD https://artifactory.corchestra.ru/artifactory/libs-snapshot-local/ru/curs/showcase/${SHOWCASE_MAJOR}/showcase-${SHOWCASE_MAJOR}.war webapps/showcase.war
 
-ADD http://artifactory.corchestra.ru/artifactory/corchestra-dev/${SHOWCASE_VERSION}/showcase-${SHOWCASE_MAJOR}-SNAPSHOT.war webapps/${WAR_NAME}.war
-# ADD http://jenkins.curs.ru:1111/job/Showcase/lastSuccessfulBuild/artifact/build/artifacts/Showcase-${SHOWCASE_MAJOR}.${SHOWCASE_VERSION}.war webapps/${WAR_NAME}.war
+# ADD http://artifactory.corchestra.ru/artifactory/corchestra-dev/${SHOWCASE_VERSION}/showcase-${SHOWCASE_MAJOR}-SNAPSHOT.war webapps/${WAR_NAME}.war
+ADD http://jenkins.curs.ru:1111/job/Showcase/lastSuccessfulBuild/artifact/build/artifacts/Showcase-${SHOWCASE_MAJOR}.${SHOWCASE_VERSION}.war webapps/${WAR_NAME}.war
 
 RUN unzip webapps/${WAR_NAME}.war -d webapps/${WAR_NAME} && rm webapps/${WAR_NAME}.war
 

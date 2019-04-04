@@ -2,17 +2,17 @@ ARG SHOWCASE_VERSION=101
 FROM curs/showcase:6.1.${SHOWCASE_VERSION}
 
 # environment variables for generalapp.properties file
-ENV showcase_web_console_size=100
-ENV showcase_web_console_add_text_files=100
-ENV showcase_id_casesensitive=false
-ENV showcase_jmx_enable=false
+ENV showcase_web.console.size=100
+ENV showcase_web.console.add.text.files=100
+ENV showcase_id.casesensitive=false
+ENV showcase_jmx.enable=false
 
-ENV showcase_security_crossdomain_authentication=false
-ENV showcase_login_title=Showcase
-ENV showcase_copy_common_files_on_startup=true
-ENV showcase_delete_solutions_dir_on_tomcat_startup=true
-ENV showcase_celesta_skip_dbupdate=false
-ENV showcase_celesta_force_dbinitialize=false
+ENV showcase_security.crossdomain.authentication=false
+ENV showcase_login.title=Showcase
+ENV showcase_copy.common.files.on.startup=true
+ENV showcase_delete.solutions.dir.on.tomcat.startup=true
+ENV showcase_celesta.skip.dbupdate=false
+ENV showcase_celesta.force.dbinitialize=false
 
 # create directory for userdata
 RUN mkdir userdata

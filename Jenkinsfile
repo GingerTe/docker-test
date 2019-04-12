@@ -13,7 +13,7 @@ node {
         image = docker.build(registry + ":6.1.$BUILD_NUMBER", '--build-arg "SHOWCASE_VERSION=${BUILD_NUMBER}"')
     }
 
-    stage('Build common image') {
+    stage('Build properties image') {
         propertiesImage = docker.build(registry + ":6.1.$BUILD_NUMBER-properties", '-f Dockerfile-properties', '--build-arg "SHOWCASE_VERSION=${BUILD_NUMBER}"')
     }
 
